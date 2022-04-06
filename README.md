@@ -36,7 +36,7 @@ Dependency | Remote Machine | Local Machine |
 [Docker](https://docs.docker.com/get-docker/) | Yes | No |
 [Docker-Compose](https://docs.docker.com/compose/install/) | Yes | No |
 [Node.js](https://nodejs.org/en/) | No | Yes |
-[Angular CLI](https://angular.io/cli) | No| Yes |
+[Create React App CLI](https://reactjs.org/docs/create-a-new-react-app.html) | No| Yes |
 [Rehost CLI](https://docs.rehost.in/#/getting-started/installation) | Yes | Yes |
 
 ### Usage
