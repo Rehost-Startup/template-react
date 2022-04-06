@@ -53,7 +53,7 @@ label: '<username>.personal.template-react'
 urls:
   - "<username>.personal.react:80"
 app_type: 'docker-compose'
-devices:
+machines:
   - "<username>.personal.vm"
 ```
 Here, replace `<username>` with your Rehost Username.
@@ -78,7 +78,7 @@ You can monitor the logs of build and app in Rehost Dashboard.
 ```
 rh app hot-reload
 ```
-Edit `/src/app/app.component.html` file and save to see the changes go live instantly.
+Edit `/src/App.js` file and save to see the changes go live instantly.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
