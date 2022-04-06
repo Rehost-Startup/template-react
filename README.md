@@ -7,9 +7,9 @@
     <img src="https://rehost.in/assets/images/React-icon.svg.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Rehost Template: Angular</h3>
+<h3 align="center">Rehost Template: React</h3>
   <p align="center">
-    Hot-Reload Angular Project on Cloud with Rehost CLI
+    Hot-Reload React Project on Cloud with Rehost CLI
     <br />
     <a href="https://docs.rehost.in/#/getting-started/quickstart"><strong>Explore the docs »</strong></a>
     <br />
@@ -22,7 +22,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The core Angular projects are no different than what's created using Angular CLI (`ng new app`). The `Dockerfile`, `docker-compose.yml` and `rehostapp.yml` files are developed to support hot-reload inside Docker containers that are running on the remote machine or the local machine.
+The core React project files are no different than what's created using React CLI (`npx create-react-app my-app`). The `Dockerfile`, `docker-compose.yml` and `rehostapp.yml` files are developed to support hot-reload inside Docker containers that are running on the remote machine or the local machine.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -51,7 +51,7 @@ version: 1
 
 label: '<username>.personal.template-react'
 urls:
-  - "<username>.personal.angular:80"
+  - "<username>.personal.react:80"
 app_type: 'docker-compose'
 devices:
   - "<username>.personal.vm"
