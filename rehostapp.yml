@@ -4,5 +4,5 @@ label: '<username>.personal.template-react'
 urls:
   - "<username>.personal.react:80"
 app_type: 'docker-compose'
-devices:
+machines:
   - "<username>.personal.vm"
