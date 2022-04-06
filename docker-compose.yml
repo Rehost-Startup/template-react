@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  template_react:
+    image: template_react
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - 80:3000
+    command: "npm start"
+    build:
+      context: .
+      dockerfile: Dockerfile    
+    volumes:
+      - ./:/home/app
+      - /home/app/node_modules

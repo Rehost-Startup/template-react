@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+<div id="top"></div>
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://rehost.in/templates">
+    <img src="https://rehost.in/assets/images/logo.svg" alt="Logo" width="80" height="80">
+    <img src="https://rehost.in/assets/images/React-icon.svg.png" alt="Logo" width="80" height="80">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">Rehost Template: Angular</h3>
+  <p align="center">
+    Hot-Reload Angular Project on Cloud with Rehost CLI
+    <br />
+    <a href="https://docs.rehost.in/#/getting-started/quickstart"><strong>Explore the docs »</strong></a>
+    <br />
+    <a href="https://github.com/Rehost-Startup/template-react/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Rehost-Startup/template-react/issues">Request Feature</a>
+  </p>
+</div>
 
-## Available Scripts
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-In the project directory, you can run:
+The core Angular projects are no different than what's created using Angular CLI (`ng new app`). The `Dockerfile`, `docker-compose.yml` and `rehostapp.yml` files are developed to support hot-reload inside Docker containers that are running on the remote machine or the local machine.
 
-### `npm start`
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- GETTING STARTED -->
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Dependency | Remote Machine | Local Machine |
+--- | --- | --- |
+[Docker](https://docs.docker.com/get-docker/) | Yes | No |
+[Docker-Compose](https://docs.docker.com/compose/install/) | Yes | No |
+[Node.js](https://nodejs.org/en/) | No | Yes |
+[Angular CLI](https://angular.io/cli) | No| Yes |
+[Rehost CLI](https://docs.rehost.in/#/getting-started/installation) | Yes | Yes |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Usage
 
-### `npm run build`
+1. Clone this repository
+```
+git clone https://github.com/Rehost-Startup/template-react.git
+```
+2. Edit `rehostapp.yml` file:
+```
+version: 1
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+label: '<username>.personal.template-react'
+urls:
+  - "<username>.personal.angular:80"
+app_type: 'docker-compose'
+devices:
+  - "<username>.personal.vm"
+```
+Here, replace `<username>` with your Rehost Username.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. On your VM instance, create a new file named `rehostdevice.yml` with the following content: 
+```
+version: 1
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+label: '<username>.personal.gcp'
+memory: '2gb'
+disk: '256gb'
+``` 
+Next, run `rh machine save` followed by `rh machine up` to connect your VM instance to Rehost.
 
-### `npm run eject`
+4. Finally, run the following command on local machine to deploy the project:
+```
+rh app deploy
+```
+You can monitor the logs of build and app in Rehost Dashboard.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Start Hot-Reload session using:
+```
+rh app hot-reload
+```
+Edit `/src/app/app.component.html` file and save to see the changes go live instantly.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- USAGE EXAMPLES -->
+## More Templates
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Checkout more templates at [rehost.in/templates](https://rehost.in/templates).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Learn More
+<!-- LICENSE -->
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Code Splitting
+<!-- CONTACT -->
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Connect with Rehost Community on [Discord](https://discord.gg/RnkBxDJJhQ).
