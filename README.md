@@ -22,7 +22,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The core React project files are no different than what's created using React CLI (`npx create-react-app my-app`). The `Dockerfile`, `docker-compose.yml` and `rehostapp.yml` files are developed to support hot-reload inside Docker containers that are running on the remote machine or the local machine.
+The core React project files are no different than what's created using React CLI (`npx create-react-app my-app`). The following files have been added to give the hot-reload experience on remote machine:
+* `setup.js`: This is to fix a known bug in webpack-based hot reloading inside Docker for react. This is react-specific fix and other web frameworks do not require it.
+* `Dockerfile`: Simple docker file that installs node dependencies and runs the app.
+* `docker-compose.yml`: Mounts the current directory inside docker container to reflect the local file changes.
+* `rehostapp.yml`: Connects the current directory with remote machine and serve as configuration file Rehost in deployment and hot-reload pipelines.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
