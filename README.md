@@ -51,8 +51,6 @@ git clone https://github.com/Rehost-Startup/template-react.git
 ```
 2. Edit `rehostapp.yml` file:
 ```
-version: 1
-
 label: '<username>/<team_name>/template-react'
 urls:
   - "<username>-<team_name>-template-react.react:80"
